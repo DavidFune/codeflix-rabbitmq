@@ -13,4 +13,9 @@ services:
     environment:
       - RABBITMQ_DEFAULT_USER=RABBITMQ_DEFAULT_USER
       - RABBITMQ_DEFAULT_PASS=RABBITMQ_DEFAULT_USER
-      
+    networks:
+      - micro-catalog
+
+networks:
+  micro-catalog:
+    driver: bridge
